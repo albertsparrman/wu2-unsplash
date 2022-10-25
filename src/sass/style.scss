@@ -1,0 +1,19 @@
+html, body {
+    background-color: brown;
+}
+
+.grud {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 3.4fr 1fr 1fr 2fr;
+    width: 1rem;
+}
+
+img {
+    width: auto;
+
+}
+
+picture:nth-child(2) {
+    border: 2px solid orange;
+}
