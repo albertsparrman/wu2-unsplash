@@ -1,11 +1,21 @@
 ---
 layout: base.njk
 ---
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
 <main>
     <h1>Data dump</h1>
+    <a href="/bindex">ssksk</a>
+    {% image capital[0].flags.png, "blah blah" %}
+    
+    <p> {{ capital[0].name.nativeName.swe.common }}</p>
+    <pre>
+        <p>{{ capital[0] | dump(2) }}</p>
+    </pre>
     <p>Min github user: {{ github.login }} och plats: {{ github.location }}.</p>
-    <div class="gru">
+    <div class="grud">
         {% asyncAll  item in unsplash.results %}
         <!-- <pre>{{ item | dump(2) }}</pre> -->
         <!-- <img src="{{ item.urls.small }}" alt="{{ item.description }}"> -->

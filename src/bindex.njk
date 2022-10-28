@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+<head>
+    <link rel="stylesheet" href="../css/grot.css">
+</head>
+
+<main>
+    <a href="/">sjijsk</a>
+    <div class="bilder">
+        <div>
+            {% image capital[0].flags.png, "blah blah" %}
+            <p>Flag</p>
+        </div>
+
+
+        <div>
+            {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
+            <p>Coat of arms</p>
+        </div>
+    </div>
+
+    <h1>{{ capital[0].name.common }}</h1>
+</main>
