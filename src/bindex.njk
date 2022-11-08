@@ -6,19 +6,35 @@ layout: base.njk
 </head>
 
 <main>
-    <a href="/">sjijsk</a>
-    <div class="bilder">
-        <div>
-            {% image capital[0].flags.png, "blah blah" %}
-            <p>Flag</p>
+    <div class="grid">   
+        <div class="bilder">
+            <h1>{{ capital[0].name.common }}</h1>
+            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
+            <div>
+                <p>Flag</p>
+                {% image capital[0].flags.png, "blah blah" %}
+            </div>
+
+            <div>
+                <p>Coat of arms</p>
+                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
+            </div>
+
         </div>
+        <div class="bilder">
+            <h1>{{ capital[0].name.common }}</h1>
+            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
+            <div>
+                <p>Flag</p>
+                {% image capital[0].flags.png, "blah blah" %}
+            </div>
 
+            <div>
+                <p>Coat of arms</p>
+                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
+            </div>
 
-        <div>
-            {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            <p>Coat of arms</p>
         </div>
     </div>
-
-    <h1>{{ capital[0].name.common }}</h1>
+    
 </main>

@@ -1,13 +1,42 @@
-html{
-    background-color: coral;
+html, body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0.4rem;
+    border-bottom: 2px solid coral;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: head beans;
+
+}
+
+.grid .bilder:nth-child(1) {
+    grid-area: head;
+}
+
+.grid .bilder:nth-child(2) {
+    grid-area: beans;
 }
 
 .bilder {
-    display: flex;
-    align-items: center;
+    text-align: center;
     padding: 0.4rem;
     padding-top: 0.8rem;
-    background-color: white;
 }
 
 

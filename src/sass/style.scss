@@ -5,6 +5,7 @@ html, main {
 .grud {
     padding: 0;
     grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
     margin: 0;
     gap: 1rem;
     width: 20rem;
