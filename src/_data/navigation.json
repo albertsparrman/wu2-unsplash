@@ -1,14 +1,10 @@
 [
     {
         "url": "/",
-        "title": "Mitt hus"
+        "title": "Intressant ställe"
     },
     {
         "url": "/bindex",
-        "title": "Om"
-    },
-    {
-        "url": "/kontakt",
-        "title": "Ring"
+        "title": "Flaggsak"
     }
 ]
