@@ -1,91 +1,23 @@
 ---
 layout: base.njk
 ---
+
 <head>
-    <link rel="stylesheet" href="../css/grot.css">
+    <link rel="stylesheet" href="/css/grot.css">
 </head>
 
 <main>
     <div class="grid">   
+        {% asyncAll item in capital %}
         <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-        <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-        <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-        <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-        <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-        <div class="bilder">
-            <h1>{{ capital[0].name.common }}</h1>
-            <h2> {{ capital[0].name.nativeName.swe.common }}</h2>
-            <div>
-                <p>Flag</p>
-                {% image capital[0].flags.png, "blah blah" %}
-            </div>
-
-            <div>
-                <p>Coat of arms</p>
-                {% image capital[0].coatOfArms.png, "heje", "20vw, 40vw" %}
-            </div>
-        </div>
-
+            <h1>{{ item.name.common }}</h1>
+            <p>Official name</p>
+            <h2>{{ item.name.official }}</h2>
+            <p>Flag</p>
+            {% image item.flags.png, "blah blah" %}
+            <p class="imgsrc">Image source: {{ item.flags.png }}</p>
+        </div> 
+        {% endall %}
     </div>
     
 </main>
